@@ -1,0 +1,10 @@
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\bin\Debug\VP_Proekt.exe.config
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\bin\Debug\VP_Proekt.exe
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\bin\Debug\VP_Proekt.pdb
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.csproj.AssemblyReference.cache
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.Properties.Resources.resources
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.csproj.GenerateResource.cache
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.csproj.CoreCompileInputs.cache
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.exe
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.pdb
+C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.Form.resources
