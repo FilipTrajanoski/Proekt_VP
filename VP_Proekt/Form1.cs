@@ -17,23 +17,29 @@ namespace VP_Proekt
         public bool MoveUpward2 { get; set; } = false;
         public bool MoveDownward1 { get; set; } = false;
         public bool MoveDownward2 { get; set; } = false;
-        int tickCounter = 0;
+        int tickCounterForBall = 0;
+        int tickCounterForNewBall = 0;
+        int tickCounterForWall = 0;
 
         public Form()
         {
             InitializeComponent();
             scene = new Scene(this.Width, this.Height);
+            this.DoubleBuffered = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
             timer2.Start();
-            timerWall.Start();
+            //timerWall.Start();
+            timerBall.Start();
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            lbPlayer1Points.Text = scene.FirstPlayerPoints.ToString();
+            lbPlayer2Points.Text = scene.SecondPlayerPoints.ToString();
             scene.Draw(e.Graphics);
         }
 
@@ -117,12 +123,49 @@ namespace VP_Proekt
 
         private void timerWall_Tick(object sender, EventArgs e)
         {
+            if (!scene.IsWallInGame)
+            {
+                tickCounterForWall++;
+                if (tickCounterForWall == 300)
+                {
+                    scene.IsWallInGame = true;
+                    tickCounterForWall = 0;
+                }
+                return;
+            }
             scene.MoveWall();
+            Invalidate();
         }
 
         private void lbPlayer1Points_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timerBall_Tick(object sender, EventArgs e)
+        {
+            if (!scene.IsBallInGame)
+            {
+                timerWall.Stop();
+                tickCounterForNewBall++;
+                if(tickCounterForNewBall == 300)
+                {
+                    scene.IsBallInGame = true;
+                    scene.createBall();
+                    timerWall.Start();
+                    tickCounterForNewBall = 0;
+                }
+                return;
+            }
+            tickCounterForBall++;
+            if (tickCounterForBall == 1000)
+            {
+                scene.ballVelocityX += 0.5;
+                scene.ballVelocityY += 0.5;
+                tickCounterForBall = 0;
+            }
+            scene.MoveBall();
+            Invalidate();
         }
     }
 }
