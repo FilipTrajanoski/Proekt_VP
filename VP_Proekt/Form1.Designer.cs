@@ -36,6 +36,7 @@ namespace VP_Proekt
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.timerWall = new System.Windows.Forms.Timer(this.components);
+            this.timerBall = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbPlayer1Points
@@ -45,7 +46,7 @@ namespace VP_Proekt
             this.lbPlayer1Points.ForeColor = System.Drawing.Color.Red;
             this.lbPlayer1Points.Location = new System.Drawing.Point(361, 9);
             this.lbPlayer1Points.Name = "lbPlayer1Points";
-            this.lbPlayer1Points.Size = new System.Drawing.Size(31, 32);
+            this.lbPlayer1Points.Size = new System.Drawing.Size(30, 32);
             this.lbPlayer1Points.TabIndex = 1;
             this.lbPlayer1Points.Text = "0";
             this.lbPlayer1Points.Click += new System.EventHandler(this.lbPlayer1Points_Click);
@@ -57,7 +58,7 @@ namespace VP_Proekt
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.label2.Location = new System.Drawing.Point(398, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(24, 32);
+            this.label2.Size = new System.Drawing.Size(23, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "-";
             // 
@@ -68,7 +69,7 @@ namespace VP_Proekt
             this.lbPlayer2Points.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lbPlayer2Points.Location = new System.Drawing.Point(428, 9);
             this.lbPlayer2Points.Name = "lbPlayer2Points";
-            this.lbPlayer2Points.Size = new System.Drawing.Size(31, 32);
+            this.lbPlayer2Points.Size = new System.Drawing.Size(30, 32);
             this.lbPlayer2Points.TabIndex = 3;
             this.lbPlayer2Points.Text = "0";
             this.lbPlayer2Points.Click += new System.EventHandler(this.lbPlayer2Points_Click);
@@ -87,6 +88,11 @@ namespace VP_Proekt
             // 
             this.timerWall.Interval = 10;
             this.timerWall.Tick += new System.EventHandler(this.timerWall_Tick);
+            // 
+            // timerBall
+            // 
+            this.timerBall.Interval = 2;
+            this.timerBall.Tick += new System.EventHandler(this.timerBall_Tick);
             // 
             // Form
             // 
@@ -114,6 +120,7 @@ namespace VP_Proekt
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Timer timerWall;
+        private System.Windows.Forms.Timer timerBall;
     }
 }
 

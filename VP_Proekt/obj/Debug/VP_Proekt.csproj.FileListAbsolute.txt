@@ -8,3 +8,14 @@ C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.csproj.
 C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.exe
 C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.pdb
 C:\Users\Dell E5440\source\repos\VP_Proekt\VP_Proekt\obj\Debug\VP_Proekt.Form.resources
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\bin\Debug\VP_Proekt.exe.config
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\bin\Debug\VP_Proekt.exe
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\bin\Debug\VP_Proekt.pdb
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.AssemblyReference.cache
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.SuggestedBindingRedirects.cache
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.Form.resources
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.Properties.Resources.resources
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.GenerateResource.cache
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.CoreCompileInputs.cache
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.exe
+C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.pdb
