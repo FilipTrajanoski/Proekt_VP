@@ -33,7 +33,7 @@ namespace VP_Proekt
             }
             else
             {
-                b = new SolidBrush(Color.Black);
+                b = new SolidBrush(Color.Cyan);
             }
             g.FillRectangle(b, Center.X - Width/2, Center.Y - Height/2, Width, Height);
             b.Dispose();
@@ -44,7 +44,7 @@ namespace VP_Proekt
         {
             if (Center.Y - Height/2 > Up.Y)
             {
-                Center = new Point(Center.X, Center.Y - 2);
+                Center = new Point(Center.X, Center.Y - 3);
             }
         }
 
@@ -52,7 +52,7 @@ namespace VP_Proekt
         {
             if (Center.Y + Height/2 < Down.Y)
             {
-                Center = new Point(Center.X, Center.Y + 2);
+                Center = new Point(Center.X, Center.Y + 3);
             }
         }
     }

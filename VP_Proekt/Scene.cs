@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace VP_Proekt
 {
@@ -29,6 +30,7 @@ namespace VP_Proekt
         public bool IsBallInGame { get; set; }
         public int FirstPlayerPoints { get; set; }
         public int SecondPlayerPoints { get; set; }
+        public bool Pause { get; set; } = false;
 
         public Scene(int width, int height)
         {
@@ -54,7 +56,7 @@ namespace VP_Proekt
         {
             Player1.Draw(graphics);
             Player2.Draw(graphics);
-            if(IsWallInGame)
+            if (IsWallInGame)
             {
                 Wall.Draw(graphics);
             }
@@ -108,30 +110,62 @@ namespace VP_Proekt
                 {
                     UpDown = true;
                 }
-                else if(Wall.Center.Y - (int)(Wall.Height / 2) == Up.Left.Y)
+                else if (Wall.Center.Y - (int)(Wall.Height / 2) == Up.Left.Y)
                 {
                     UpDown = false;
                 }
             }
-           
-            
+
+
         }
 
         internal void MoveBall()
         {
-            if (ball.Center.X < Player1.Center.X)
+            if (ball.Center.X < Player1.Center.X && !Pause)
             {
                 IsBallInGame = false;
                 IsWallInGame = false;
                 SecondPlayerPoints++;
+                if (SecondPlayerPoints == 3)
+                {
+                    Pause = true;
+                    DialogResult dialog = MessageBox.Show("Player 2 won! \n Do you want to restart the game?", "pong", MessageBoxButtons.YesNo);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        FirstPlayerPoints = 0;
+                        SecondPlayerPoints = 0;
+                        Player1 = new Player(new Point((int)(Width / 10), (int)((Up.Left.Y + Down.Left.Y) / 2)), 1);
+                        Player2 = new Player(new Point((int)(Width / 10 * 9), (int)((Up.Left.Y + Down.Left.Y) / 2)), 2);
+                        Pause = false;
+
+                    }
+                    else
+                        Application.Exit();
+                }
                 resetMovementValues();
                 return;
             }
-            else if (ball.Center.X > Player2.Center.X)
+            else if (ball.Center.X > Player2.Center.X && !Pause)
             {
                 IsBallInGame = false;
                 IsWallInGame = false;
                 FirstPlayerPoints++;
+                if (FirstPlayerPoints == 3)
+                {
+                    Pause = true;
+                    DialogResult dialog = MessageBox.Show("Player 1 won! \n Do you want to restart the game?", "pong", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (dialog == DialogResult.Yes)
+                    {
+                        FirstPlayerPoints = 0;
+                        SecondPlayerPoints = 0;
+                        Player1 = new Player(new Point((int)(Width / 10), (int)((Up.Left.Y + Down.Left.Y) / 2)), 1);
+                        Player2 = new Player(new Point((int)(Width / 10 * 9), (int)((Up.Left.Y + Down.Left.Y) / 2)), 2);
+                        Pause = false;
+                    }
+                    else
+                        Application.Exit();
+
+                }
                 resetMovementValues();
                 return;
             }
@@ -158,12 +192,13 @@ namespace VP_Proekt
 
                 nextX = -(int)(ballVelocityX * Math.Cos(angleInRad));
                 nextY = (int)(ballVelocityY * -Math.Sin(angleInRad));
-            }else if (IsWallInGame && rectangleBall.IntersectsWith(rectangleWall))
+            }
+            else if (IsWallInGame && rectangleBall.IntersectsWith(rectangleWall))
             {
                 var bounceAngle = CalculateBounceDirection(ball.Center.Y, Wall.Center.Y - Wall.Height / 2, Wall.Height);
                 var angleInRad = bounceAngle * (Math.PI / 180);
                 int sign = 1;
-                if(nextX > 0)
+                if (nextX > 0)
                 {
                     sign = -1;
                 }
@@ -182,7 +217,7 @@ namespace VP_Proekt
         static float CalculateBounceDirection(int ballY, int paddleY, int paddleHeight)
         {
             float relativeIntersectY = (paddleY + (paddleHeight / 2)) - ballY;
-            float normalizedIntersectY = relativeIntersectY / (paddleHeight/2); 
+            float normalizedIntersectY = relativeIntersectY / (paddleHeight / 2);
             float bounceAngle = normalizedIntersectY * MAXBOUNCEANGLE;
             bounceAngle = Math.Max(-75, Math.Min(75, bounceAngle));
             return bounceAngle;
@@ -190,7 +225,7 @@ namespace VP_Proekt
 
         public void createBall()
         {
-            ball = new Ball(new Point((Player1.Center.X + Player2.Center.X) / 2, (int)random.Next((int)(Height / 8) + Ball.Radius, (int)(Height / 10 * 8) - Ball.Radius)), Color.Green);
+            ball = new Ball(new Point((Player1.Center.X + Player2.Center.X) / 2, (int)random.Next((int)(Height / 8) + Ball.Radius, (int)(Height / 10 * 8) - Ball.Radius)), Color.Yellow);
         }
 
         public void resetMovementValues()

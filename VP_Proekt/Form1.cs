@@ -123,10 +123,10 @@ namespace VP_Proekt
 
         private void timerWall_Tick(object sender, EventArgs e)
         {
-            if (!scene.IsWallInGame)
+            if (!scene.IsWallInGame && !scene.Pause)
             {
                 tickCounterForWall++;
-                if (tickCounterForWall == 300)
+                if (tickCounterForWall == 500)
                 {
                     scene.IsWallInGame = true;
                     tickCounterForWall = 0;
@@ -144,7 +144,7 @@ namespace VP_Proekt
 
         private void timerBall_Tick(object sender, EventArgs e)
         {
-            if (!scene.IsBallInGame)
+            if (!scene.IsBallInGame && !scene.Pause)
             {
                 timerWall.Stop();
                 tickCounterForNewBall++;

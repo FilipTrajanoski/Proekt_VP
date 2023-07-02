@@ -30,6 +30,7 @@ namespace VP_Proekt
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.lbPlayer1Points = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lbPlayer2Points = new System.Windows.Forms.Label();
@@ -98,6 +99,7 @@ namespace VP_Proekt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lbPlayer2Points);
             this.Controls.Add(this.label2);

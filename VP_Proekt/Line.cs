@@ -20,7 +20,7 @@ namespace VP_Proekt
 
         public void Draw(Graphics g)
         {
-            Pen pen = new Pen(Color.Black);
+            Pen pen = new Pen(Color.Red);
             g.DrawLine(pen, Left, Right);
             pen.Dispose();
         }

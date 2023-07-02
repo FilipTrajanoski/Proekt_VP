@@ -19,3 +19,25 @@ C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.GenerateRe
 C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.csproj.CoreCompileInputs.cache
 C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.exe
 C:\Users\filip\Desktop\Proekt_VP\VP_Proekt\obj\Debug\VP_Proekt.pdb
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\bin\Debug\VP_Proekt.exe.config
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\bin\Debug\VP_Proekt.exe
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\bin\Debug\VP_Proekt.pdb
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.csproj.AssemblyReference.cache
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.csproj.SuggestedBindingRedirects.cache
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.Form.resources
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.Properties.Resources.resources
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.csproj.GenerateResource.cache
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.csproj.CoreCompileInputs.cache
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.exe
+D:\FINKI\forms main\Proekt_VP-master\Proekt_VP-master\VP_Proekt\obj\Debug\VP_Proekt.pdb
+D:\FINKI\forms\VP_Proekt\bin\Debug\VP_Proekt.exe.config
+D:\FINKI\forms\VP_Proekt\bin\Debug\VP_Proekt.exe
+D:\FINKI\forms\VP_Proekt\bin\Debug\VP_Proekt.pdb
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.csproj.AssemblyReference.cache
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.csproj.SuggestedBindingRedirects.cache
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.Form.resources
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.Properties.Resources.resources
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.csproj.GenerateResource.cache
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.csproj.CoreCompileInputs.cache
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.exe
+D:\FINKI\forms\VP_Proekt\obj\Debug\VP_Proekt.pdb
